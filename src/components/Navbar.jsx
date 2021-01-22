@@ -9,10 +9,10 @@ const Navbar = () => {
           <div className="flex items-center justify-center h-16">
             <div className="flex items-center">
               <div className="flex items-baseline space-x-4">
-                <NavLink exact to="/"
+                <NavLink exact to="/react-todo/"
                   activeClassName="bg-black bg-opacity-40 text-white px-3 py-2 rounded-md text-sm font-medium"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
-                <NavLink to="/todo"
+                <NavLink to="/react-todo/todo"
                   activeClassName="bg-black bg-opacity-40 text-white px-3 py-2 rounded-md text-sm font-medium"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Todo</NavLink>
               </div>

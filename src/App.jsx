@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/todo" component={Todo} />
+          <Route exact path="/react-todo/" component={Home} />
+          <Route exact path="/react-todo/todo" component={Todo} />
         </Switch>
       </Router>
     </div>
