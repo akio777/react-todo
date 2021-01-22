@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../logo.svg"
-import MBLogo from '../mb.png'
+import MBLogo from '../mb.svg'
 
 function Home() {
   return (
@@ -14,9 +14,10 @@ function Home() {
         </div>
       </div>
       <img src={logo} alt="React-logo" className="App-logo absolute z-0 opacity-10 noselect"/>
-      <p className="text-sm text-white absolute bottom-10 text-center font-light flex items-center noselect">Created with&nbsp;
-      <a href="https://reactjs.org/" className="text-blue-400 underline font-normal transition-all hover:text-blue-500">React</a>&nbsp;and&nbsp;
-      <a href="https://tailwindcss.com/" className="text-blue-400 underline font-normal transition-all hover:text-blue-500">tailwindcss</a>&nbsp;©&nbsp;<img src={MBLogo} alt="MB-Logo" className="mb-1 max-h-5 mb-logo" /></p>
+      <p className="text-sm text-white absolute bottom-8 text-center font-light flex items-center noselect">Created&nbsp;with&nbsp;
+      <a href="https://reactjs.org/" className="text-blue-400 font-normal transition-all hover:text-blue-500">React</a>&nbsp;and&nbsp;
+      <a href="https://tailwindcss.com/" className="text-blue-400 font-normal transition-all hover:text-blue-500">tailwindcss</a>&nbsp;©&nbsp;
+      <img src={MBLogo} alt="MB-Logo" className="mb-1 max-h-4 mb-logo" /></p>
     </div>
   )
 }
