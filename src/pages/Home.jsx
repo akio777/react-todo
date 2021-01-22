@@ -10,7 +10,7 @@ function Home() {
         <p className="text-lg text-blue-400 font-extrabold">React</p>
         <h1 className="text-white text-5xl font-bold">TODO APP</h1>
         <div className="btn mt-20 flex items-center justify-center">
-          <Link to="/todo" className="text-white text-xl font-bold flex text-center items-center justify-center rounded-lg bg-blue-500 w-10 h-10 transition-all hover:bg-blue-600">→</Link>
+          <Link to="react-todo/todo" className="text-white text-xl font-bold flex text-center items-center justify-center rounded-lg bg-blue-500 w-10 h-10 transition-all hover:bg-blue-600">→</Link>
         </div>
       </div>
       <img src={logo} alt="React-logo" className="App-logo absolute z-0 opacity-10 noselect"/>
