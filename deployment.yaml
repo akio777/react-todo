@@ -1,3 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-todo-k8s-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: react-todo-k8s
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,36 +16,36 @@ metadata:
     labels:
         app: react-todo-k8s
 spec:
-    replicas: 2
     selector:
         matchLabels:
             app: react-todo-k8s
+    replicas: 2
     template:
         metadata:
-        labels:
-            app: react-todo-k8s
-    spec:
-        containers:
-        -   name: react-todo-k8s
-            image: chanutpong/react-todo-k8s
-            ports:
-            -   containerPort: 3000
-            resources:
-                limits:
-                    memory: '128Mi'
-                    cpu: '200m'
-            livenessProbe:
-                httpGet:
-                    path: /index.html
-                    port: 3000
-                initialDelaySeconds: 15
-                timeoutSeconds: 2
-                periodSeconds: 5
-                failureThreshold: 1
-             readinessProbe:
-                httpGet:
-                    path: /index.html
-                    port: 3000
-                initialDelaySeconds: 15
-                periodSeconds: 5
-                failureThreshold: 1
+            labels:
+                app: react-todo-k8s
+        spec:
+            containers:
+            -   name: react-todo-k8s
+                image: chanutpong/react-todo-k8s
+                ports:
+                -   containerPort: 3000
+                resources:
+                    limits:
+                        memory: '128Mi'
+                        cpu: '200m'
+                livenessProbe:
+                    httpGet:
+                        path: /index.html
+                        port: 3000
+                    initialDelaySeconds: 15
+                    timeoutSeconds: 2
+                    periodSeconds: 5
+                    failureThreshold: 1
+                readinessProbe:
+                    httpGet:
+                        path: /index.html
+                        port: 3000
+                    initialDelaySeconds: 15
+                    periodSeconds: 5
+                    failureThreshold: 1
