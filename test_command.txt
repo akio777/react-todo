@@ -1,0 +1,5 @@
+hey -n 100 -z 1m -c 50 -m GET https://akio777.nsharuk.com/react-todo/
+
+kubectl get hpa -w
+
+kubectl describe hpa
