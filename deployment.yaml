@@ -4,10 +4,13 @@ metadata:
   name: react-todo-k8s-service
 spec:
   ports:
-  - port: 80
+  - name: http
+    protocol: TCP
+    port: 80
     targetPort: 3000
   selector:
     app: react-todo-k8s
+  type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
