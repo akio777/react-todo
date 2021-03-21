@@ -1,21 +1,15 @@
-apiVersion: networking.k8s.io/v1beta1 # for versions before 1.14 use extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: ingress-service
+  name: test-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - http:
-        paths:
-          - path: /
-            backend:
-              serviceName: dummy
-              servicePort: 80
-          - path: /react
-            backend:
-              serviceName: react-todo-k8s-service
-              servicePort: 80
-
-                
+  - http:
+      paths:
+      - path: /spa_homework
+        pathType: Prefix
+        backend:
+          serviceName: react-todo-k8s-service
+          servicePort: 80
