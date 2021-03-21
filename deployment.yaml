@@ -22,7 +22,7 @@ spec:
     selector:
         matchLabels:
             app: react-todo-k8s
-    replicas: 1
+    replicas: 2
     template:
         metadata:
             labels:
