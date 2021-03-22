@@ -1,16 +1,16 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: hello
+  name: react-todo-k8s
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: react-todo-k8s
-  minReplicas: 2
+  minReplicas: 1
   maxReplicas: 10
   metrics:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 45
+      targetAverageUtilization: 50

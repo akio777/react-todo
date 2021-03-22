@@ -10,7 +10,8 @@ spec:
     targetPort: 3000
   selector:
     app: react-todo-k8s
-  type: ClusterIP
+  type: LoadBalancer
+  loadBalancerIP: 192.168.0.106
 ---
 apiVersion: apps/v1
 kind: Deployment
